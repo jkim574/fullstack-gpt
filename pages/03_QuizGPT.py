@@ -11,6 +11,8 @@ from langchain.schema import BaseOutputParser, output_parser
 
 class JsonOutputParser(BaseOutputParser):
     def parse(self, text):
+        # the text that LLM produces contains '''json. So we eliminate those.
+        # Use the JSON module to turn a string.
         text = text.replace("```", "").replace("json", "")
         return json.loads(text)
 
@@ -73,6 +75,9 @@ questions_prompt = ChatPromptTemplate.from_messages(
 
 questions_chain = {"context": format_docs} | questions_prompt | llm
 
+# The reason for using double bracket, is to not letting langchain to get confused.
+# It's helpful to add output format '''json
+# This will not let LLM to reply as such: "Certainly! I would like to answer that!"
 formatting_prompt = ChatPromptTemplate.from_messages(
     [
         (
@@ -200,7 +205,6 @@ formatting_prompt = ChatPromptTemplate.from_messages(
 
 formatting_chain = formatting_prompt | llm
 
-
 @st.cache_data(show_spinner="Loading file...")
 def split_file(file):
     file_content = file.read()
@@ -216,13 +220,20 @@ def split_file(file):
     docs = loader.load_and_split(text_splitter=splitter)
     return docs
 
-
+# caching the document that already uploaded.
+# The reason for caching is to save time when re-run the same documents.
 @st.cache_data(show_spinner="Making quiz...")
+# The reason why it should be _docs is that if we just say docs, 
+# docs parameter is not hashable 
 def run_quiz_chain(_docs, topic):
     chain = {"context": questions_chain} | formatting_chain | output_parser
     return chain.invoke(_docs)
 
-
+# caching the wikipedia search
+# cache data hash the parameter "term".
+# so if this function is called again, and signature of this function doesnt change.
+# Then the streamlit knows that this function should not run again.
+# So it gives the previous values.
 @st.cache_data(show_spinner="Searching Wikipedia...")
 def wiki_search(term):
     retriever = WikipediaRetriever(top_k_results=5)
@@ -266,7 +277,7 @@ if not docs:
 else:
     response = run_quiz_chain(docs, topic if topic else file.name)
     with st.form("questions_form"):
-        st.write(response)
+    #    st.write(response)
         for question in response["questions"]:
             st.write(question["question"])
             value = st.radio(
@@ -278,4 +289,5 @@ else:
                 st.success("Correct!")
             elif value is not None:
                 st.error("Wrong!")
+                
         button = st.form_submit_button()
