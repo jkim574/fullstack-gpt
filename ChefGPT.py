@@ -64,7 +64,3 @@ def get_example():
         "quote": "Life is hsort so eat is all."
     }
     
-def get_quote(request: Request):
-    print(request.header)
-    return {"quote": "Life is short so eat it all.",
-            "year": 1958, }
