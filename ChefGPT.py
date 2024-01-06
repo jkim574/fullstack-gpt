@@ -1,5 +1,4 @@
 # FastAPI is a framework for building server, like Flask.
-from typing import Any, Dict
 from fastapi import Body, FastAPI, Form, Request
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel, Field
@@ -10,17 +9,22 @@ from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Pinecone
 
 
+
+# If you have shut down server and then rebooting, then you have to update the url
+# Quick tunnel, which is meant for experimentation and does not require a Cloudflare account, 
+# Tt's important to note that these tunnels have no uptime guarantee and are intended for temporary use. 
+# If you restart the tunnel, it's likely to generate a new URL each time.
+# cloudflared tunnel --url (your url address) 
 app = FastAPI(
     title="ChefGPT. The best provider of Korean Recipes in the world",
     description="Give CheftGPT a couple of ingredients and it will give recipes in return.",
     servers=[
-        {"url":"https://spec-hc-heater-door.trycloudflare.com"}
+        {"url":"https://algeria-connector-for-ef.trycloudflare.com"}
     ]
 )
 
 
 # FastAPI doesn't load .env file.
-
 load_dotenv()
 
 pinecone.init(
@@ -58,9 +62,4 @@ def get_recipe(ingredient: str):
     docs = vector_store.similarity_search(ingredient)
     return docs
 
-
-def get_example():
-    return {
-        "quote": "Life is hsort so eat is all."
-    }
     
