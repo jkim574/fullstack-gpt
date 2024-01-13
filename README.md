@@ -1,8 +1,8 @@
-# GPT Web Applications Repository
+# Full-Stack GPT
 
 This repository contains a collection of GPT-based web applications designed for various purposes, ranging from document analysis to generating quizzes and processing video content. Each application leverages the power of GPT models to provide unique functionalities.
 
-## Applications Overview
+## GPT Web Applications
 
 ### 1. DocumentGPT
 
