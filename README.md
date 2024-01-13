@@ -34,3 +34,46 @@ MeetingGPT focuses on processing video files to generate transcripts, summaries,
 
 ---
 
+
+
+
+# ChefGPT
+
+`ChefGPT.py` is a central component of our project, leveraging FastAPI and GPT technologies to revolutionize the discovery of Korean recipes. This application blends the speed of FastAPI with cutting-edge AI to offer a unique culinary experience.
+
+## Features
+
+### FastAPI for Efficient Web Service
+
+- **Asynchronous Capabilities**: Built on FastAPI, ChefGPT efficiently handles multiple web requests concurrently, ensuring a smooth user experience.
+- **Scalability**: Designed to be robust and scalable, catering to a growing number of users.
+
+### Korean Cuisine at Your Fingertips
+
+- **Ingredient-based Recipe Suggestions**: By entering available ingredients, users can discover authentic Korean recipes that include those ingredients.
+- **Rich and Diverse Flavors**: ChefGPT focuses on the varied and flavorful world of Korean cuisine.
+
+### Cutting-Edge AI Integration
+
+- **GPT and Vector Search**: Utilizes OpenAIEmbeddings from the langchain library for converting recipe data into vectors, enabling efficient similarity searches.
+- **Relevant Results**: Ensures the recipes suggested are closely aligned with the user's ingredient input.
+
+### Simplified Recipe Discovery
+
+- **HTTP GET Endpoint**: Features a `/recipes` endpoint that accepts ingredients as input and returns a list of matching Korean recipes.
+- **User-Friendly Format**: Recipes are presented in a Document object format, detailing both the recipe and preparation instructions.
+
+### Secure and Temporary URL Deployment
+
+- **Cloudflare Integration**: Uses Cloudflare for creating temporary URLs, providing a secure and isolated testing environment.
+- **Ease of Access**: Simplifies access to the application without complex deployment processes.
+
+### Environment Management
+
+- **dotenv for Configuration**: Utilizes dotenv for efficient and secure management of application settings and API keys.
+
+## Getting Started
+
+To get started with ChefGPT, clone the repository and follow the installation instructions provided in the `INSTALL.md` file.
+
+
