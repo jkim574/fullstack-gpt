@@ -1,6 +1,42 @@
 # Full-Stack GPT
 
-This repository contains a collection of GPT-based web applications designed for various purposes, ranging from document analysis to generating quizzes and processing video content. Each application leverages the power of GPT models to provide unique functionalities.
+Full-Stack GPT is an innovative project that harnesses the capabilities of GPT (Generative Pre-trained Transformer) models in a full-stack environment. This project showcases a diverse range of applications, from document processing to interactive web applications, all powered by the advanced AI of GPT models. It demonstrates how GPT can be integrated into various aspects of a web-based platform, providing intelligent and automated solutions to complex tasks.
+
+## Table of Contents
+
+
+## Features
+
+- 🔍 Langchain Integration: Utilizes Langchain for seamless integration of GPT models, offering advanced functionalities like text summarization and question answering based on uploaded documents.
+
+- 🌐 Streamlit Web Framework: Leverages Streamlit for creating intuitive and interactive web interfaces, enabling users to interact with GPT-powered applications effortlessly.
+
+- 🧠 GPT-3.5 & GPT-4 Models: Employs GPT-3.5 and GPT-4 instances for robust text generation, offering high-quality responses and content creation.
+
+- 🍳 ChefGPT for Korean Cuisine: A specialized feature providing Korean recipe suggestions based on input ingredients, blending culinary arts with AI technology.
+
+- 📊 Efficient Data Retrieval: Incorporates vector search technology using Pinecone for efficient and relevant data retrieval.
+
+- 👩‍🏫 Educational Quizzes: Generates interactive quizzes from documents or Wikipedia articles, enhancing learning experiences.
+
+- 🔒 Privacy-Focused Features: Offers offline processing options for privacy-conscious users, ensuring data security.
+
+
+## Requirements
+
+Python 3.11.6
+OpenAI API key
+Pinecone API key
+FastAPI
+Streamlit
+Pydantic for data validation
+Cloudflare for temporary URL generation and deployment
+
+
+## Installations
+
+
+
 
 ## GPT Web Applications
 
