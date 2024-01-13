@@ -39,7 +39,7 @@ MeetingGPT focuses on processing video files to generate transcripts, summaries,
 
 # ChefGPT
 
-`ChefGPT.py` is a central component of our project, leveraging FastAPI and GPT technologies to revolutionize the discovery of Korean recipes. This application blends the speed of FastAPI with cutting-edge AI to offer a unique culinary experience.
+`ChefGPT.py` is a central component of my project, utilizing FastAPI and GPT technologies to revolutionize the discovery of Korean recipes. This application blends the speed of FastAPI with cutting-edge AI to offer a unique culinary experience.
 
 ## Features
 
@@ -47,11 +47,6 @@ MeetingGPT focuses on processing video files to generate transcripts, summaries,
 
 - **Asynchronous Capabilities**: Built on FastAPI, ChefGPT efficiently handles multiple web requests concurrently, ensuring a smooth user experience.
 - **Scalability**: Designed to be robust and scalable, catering to a growing number of users.
-
-### Korean Cuisine at Your Fingertips
-
-- **Ingredient-based Recipe Suggestions**: By entering available ingredients, users can discover authentic Korean recipes that include those ingredients.
-- **Rich and Diverse Flavors**: ChefGPT focuses on the varied and flavorful world of Korean cuisine.
 
 ### Cutting-Edge AI Integration
 
