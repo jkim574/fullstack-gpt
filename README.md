@@ -2,7 +2,13 @@
 
 Full-Stack GPT is an innovative project that harnesses the capabilities of GPT (Generative Pre-trained Transformer) models in a full-stack environment. This project showcases a diverse range of applications, from document processing to interactive web applications, all powered by the advanced AI of GPT models. It demonstrates how GPT can be integrated into various aspects of a web-based platform, providing intelligent and automated solutions to complex tasks.
 
+
 ## Table of Contents
+- 
+-
+-
+-
+
 
 
 ## Features
@@ -24,13 +30,12 @@ Full-Stack GPT is an innovative project that harnesses the capabilities of GPT (
 
 ## Requirements
 
-Python 3.11.6
-OpenAI API key
-Pinecone API key
-FastAPI
-Streamlit
-Pydantic for data validation
-Cloudflare for temporary URL generation and deployment
+- Python 3.11.6
+- OpenAI API key
+- Pinecone API key
+- Check 'requirements.txt' for more details
+- Pydantic for data validation
+- Cloudflare for temporary URL generation and deployment
 
 
 ## Installations
