@@ -4,10 +4,10 @@ Full-Stack GPT is an innovative project that harnesses the capabilities of GPT (
 
 
 ## Table of Contents
-- 
--
--
--
+- Features
+- Requirements
+- Installments
+- GPTs
 
 
 
